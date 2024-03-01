@@ -1,0 +1,136 @@
+nav{
+    height: 100px;
+    display: grid;
+    place-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg-1);
+    z-index: 100;
+    border: 1px solid var(--color-dark-Ex) ;
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-container .logo{
+    width: 60px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-Links a{
+    color: var(--color-dark);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.nav-Links .active{
+    color : var(--color-primary);
+    color: tomato;
+
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.menu-button{
+    display: none;
+}
+h3{
+    margin-right: 300px;
+}
+
+/* ..........................Media screen 1024px........................ */
+@media (max-width:1024) {
+    nav{
+        height: 90px;
+    }
+    .nav-container{
+        position: relative;
+        height: 100%;
+    }
+    .nav-container .logo{
+        width: 50px;
+    }
+    .nav-Links{
+        flex-direction: column;
+        gap: 0;
+        width: 20rem;
+        transition: var(--transition);
+        top: 0;
+        right: 0;
+        position: fixed;
+        perspective: 400px;
+    }
+    .nav-Links li{
+        height: 100%;
+        width: 100%;
+        animation: navAni 600ms forwards ease ;
+        opacity: 0;
+        transform: rotateY(-90deg);
+
+    }
+    .nav-Links a{
+        display: inline-block;
+        background: var(--color-bg-1);
+        height: 80px;
+        width: 100%;
+        display: flex;
+        padding-left: 40%;
+        align-items: center;
+        overflow: hidden;
+        box-sizing: -1rem 5rem 5rem rgba(0,0,0,0.4);
+    }
+    @keyframes navAni {
+        to{
+            transform: rotateY(0);
+            opacity: 1;
+        }
+    }
+    .nav-Links li:nth-child(2){
+        animation-delay: 200ms;
+    }
+    .nav-Links li:nth-child(3){
+        animation-delay: 400ms;
+    }
+    .nav-Links li:nth-child(4){
+        animation-delay: 600ms;
+    }
+    .nav-Links li:nth-child(5){
+        animation-delay: 800ms;
+    }
+    .nav-Links li:nth-child(6){
+        animation-delay: 1000ms;
+    }
+    .nav-Links li:nth-child(7){
+        animation-delay: 1200ms;
+    }
+
+    .menu-button{
+        display: inline-block;
+        color: var(--color-dark);
+        font-size: 18px;
+    }
+
+/* ..........................Nav links showing hiding........................ */
+
+.navLinksShow{
+    display:flex ;
+}
+.navLinksHide{
+    display: none;
+}
+
+}
+
+/* ..........................media screenning(600px ........................ */
+@media (max-width:600px) {
+    .nav-Links{
+        width:18rem
+    }
+}

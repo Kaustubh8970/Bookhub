@@ -1,0 +1,45 @@
+.feature-book-container{
+    position: relative;
+}
+.featurebook-box{
+    margin-top: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+}
+.featurebook{
+    background:var(--color-light);
+}
+
+.featurebook-info>div{
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+
+.feature-book-container .swiper-pegination{
+    margin: top;
+    margin-top: 120px;
+}
+
+.feature-border{
+    margin-top:  56px;
+    background: var(--color-dark-Ex );
+    height: 1px;
+    width: 100%;
+}
+
+.feature-btn{
+margin: auto;
+margin-right: 0;
+margin-top: -40px;
+}
+
+/* ------------------------MAX WIDTH 1024PX------------- */
+
+@media (max-width:1024) {
+    .feature-btn{
+        margin: auto;
+        margin-top: 20px;
+    }
+}
